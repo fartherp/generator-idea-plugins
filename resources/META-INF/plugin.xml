@@ -1,0 +1,59 @@
+<!--
+  ~ Copyright (c) 2018. juzhen.io. All rights reserved.
+  -->
+
+<idea-plugin>
+    <id>com.github.fartherp.plugin</id>
+    <name>Generator Code Plugin</name>
+    <version>1.0</version>
+    <vendor email="yuqiang.cui@gmail.com" url="https://github.com/fartherp/generator-idea-plugins">fartherp</vendor>
+
+    <description><![CDATA[
+        根据选择的数据库，匹配数据库中的所有表，自动生成bo类、dao接口、service接口及实现和mapping文件。
+        <br>
+        <br>
+        According to the selected database, matching all the tables of the database, automatically generate domain class, dao interface, service interface and mapping files.
+        <br>
+        作者： CK
+        <br>
+        邮箱： yuqiang.cui@gmail.com
+        <br>
+        主页： https://github.com/fartherp/generator-idea-plugins
+    ]]></description>
+
+    <change-notes><![CDATA[
+        V1.0
+        Change "SHOW COLUMNS FROM table" to "SHOW COLUMNS FROM database.table".
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="145.0"/>
+
+    <application-components>
+        <!-- 在IDEA启动时加载，在IDEA关闭时卸载 -->
+        <!--<component><implementation-class>xx.xx.xx</implementation-class></component>-->
+        <!--<component><implementation-class>com.github.fartherp.plugin.configurable.CodeConfigurable</implementation-class></component>-->
+    </application-components>
+
+    <project-components>
+        <!-- 在项目启动时加载，在项目关闭时卸载 -->
+        <!--<component><implementation-class>xx.xx.xx</implementation-class></component>-->
+    </project-components>
+
+    <module-components>
+        <!-- 在项目启动时加载，在项目关闭时卸载 -->
+        <!--<component><implementation-class>xx.xx.xx</implementation-class></component>-->
+    </module-components>
+
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceInterface="com.github.fartherp.plugin.config.CodeConfig" serviceImplementation="com.github.fartherp.plugin.config.CodeConfig"/>
+        <projectConfigurable groupId="tools" displayName="Generator Code Plugin" id="preference.CodeConfigurable" instance="com.github.fartherp.plugin.configurable.CodeConfigurable" />
+    </extensions>
+
+    <actions>
+        <action id="CodeGenerateAction" class="com.github.fartherp.plugin.action.CodeGenerateAction" text="Generator Code">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
