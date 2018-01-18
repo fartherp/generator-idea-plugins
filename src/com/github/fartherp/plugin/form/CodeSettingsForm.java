@@ -11,6 +11,7 @@ import com.github.fartherp.plugin.config.CodeConfig;
 import com.github.fartherp.plugin.dao.CodeDao;
 import com.github.fartherp.plugin.utils.ValidateUtils;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import org.apache.commons.lang.ObjectUtils;
 
 import javax.swing.*;
@@ -68,15 +69,19 @@ public class CodeSettingsForm extends JDialog {
                 }
                 // 点击查询按钮事件
                 String title[] = {"", "表名"};
-                List<String> list = CodeDao.selectTableName(config);
-                Object[][] data = new Object[list.size()][2];
-                for (int i = 0; i < list.size(); i++) {
-                    data[i][1] = list.get(i);
+                try {
+                    List<String> list = CodeDao.selectTableName(config);
+                    Object[][] data = new Object[list.size()][2];
+                    for (int i = 0; i < list.size(); i++) {
+                        data[i][1] = list.get(i);
+                    }
+                    DefaultTableModel tableModel = new DefaultTableModel(data, title);
+                    table1.setModel(tableModel);
+                    TableColumnModel tcm = table1.getColumnModel();
+                    tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
+                } catch (Exception ex) {
+                    Messages.showWarningDialog(project, "数据库连接错误,请检查配置.", "Warning");
                 }
-                DefaultTableModel tableModel = new DefaultTableModel(data, title);
-                table1.setModel(tableModel);
-                TableColumnModel tcm = table1.getColumnModel();
-                tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
             }
         });
         this.table1.addMouseListener(new MouseAdapter() {
