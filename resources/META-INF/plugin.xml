@@ -5,7 +5,7 @@
 <idea-plugin>
     <id>com.github.fartherp.plugin</id>
     <name>Generator Code Plugin</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <vendor email="yuqiang.cui@gmail.com" url="https://github.com/fartherp/generator-idea-plugins">fartherp</vendor>
 
     <description><![CDATA[
