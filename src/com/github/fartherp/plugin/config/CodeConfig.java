@@ -43,6 +43,20 @@ public class CodeConfig implements PersistentStateComponent<CodeConfig> {
 
     private String generatorType;
 
+    private String pojoPath;
+
+    private String daoPath;
+
+    private String servicePath;
+
+    private String xmlPath;
+
+    private String host;
+
+    private String port = "3306";
+
+    private String database;
+
     public String getUrl() {
         return url;
     }
@@ -123,11 +137,69 @@ public class CodeConfig implements PersistentStateComponent<CodeConfig> {
         this.generatorType = generatorType;
     }
 
+    public String getPojoPath() {
+        return pojoPath;
+    }
+
+    public void setPojoPath(String pojoPath) {
+        this.pojoPath = pojoPath;
+    }
+
+    public String getDaoPath() {
+        return daoPath;
+    }
+
+    public void setDaoPath(String daoPath) {
+        this.daoPath = daoPath;
+    }
+
+    public String getServicePath() {
+        return servicePath;
+    }
+
+    public void setServicePath(String servicePath) {
+        this.servicePath = servicePath;
+    }
+
+    public String getXmlPath() {
+        return xmlPath;
+    }
+
+    public void setXmlPath(String xmlPath) {
+        this.xmlPath = xmlPath;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
+    }
+
+    public String getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(String database) {
+        this.database = database;
+    }
+
+    @Override
     @Nullable
     public CodeConfig getState() {
         return this;
     }
 
+    @Override
     public void loadState(CodeConfig codeConfig) {
         XmlSerializerUtil.copyBean(codeConfig, this);
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018. juzhen.io. All rights reserved.
+ * Copyright (c) 2018. CK. All rights reserved.
  */
 
 package com.github.fartherp.plugin.adapter;
@@ -54,7 +54,7 @@ public class FrameworkGeneratorAdapter extends FrameworkGenerator implements Gen
                 sb.append(module);
                 sb.append('.');
             }
-            sb.append("src.main.resources.mybatis");
+            sb.append("src.main.resources.com.juzix.juice.developer.dao");
             File targetFile = FileUtilies.getDirectory(sb.toString(), gxf.getFileName(), context.getOut());
             // 目标内容
             String source = gxf.getFormattedContent();

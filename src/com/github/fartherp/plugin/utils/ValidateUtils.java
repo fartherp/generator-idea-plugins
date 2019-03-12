@@ -17,8 +17,18 @@ import org.apache.commons.lang.StringUtils;
  */
 public class ValidateUtils {
     public static boolean validateConfig(Project project, CodeConfig config) {
-        if (StringUtils.isBlank(config.getUrl())) {
-            Messages.showWarningDialog(project, "URL为空.", "Warning");
+        if (StringUtils.isBlank(config.getHost())) {
+            Messages.showWarningDialog(project, "Host为空.", "Warning");
+            return false;
+        }
+
+        if (StringUtils.isBlank(config.getPort())) {
+            Messages.showWarningDialog(project, "Port为空.", "Warning");
+            return false;
+        }
+
+        if (StringUtils.isBlank(config.getDatabase())) {
+            Messages.showWarningDialog(project, "数据库为空.", "Warning");
             return false;
         }
 

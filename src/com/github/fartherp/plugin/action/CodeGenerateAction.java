@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018. juzhen.io. All rights reserved.
+ * Copyright (c) 2018. CK. All rights reserved.
  */
 
 package com.github.fartherp.plugin.action;

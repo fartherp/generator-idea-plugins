@@ -7,12 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="IntelliJ IDEA IU-183.5912.21" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/framework-common/1.1.0/framework-common-1.1.0.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/framework-common/2.0.1/framework-common-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -21,7 +21,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/framework-core/1.1.0/framework-core-1.1.0.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/framework-exception/2.0.1/framework-exception-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -30,7 +30,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/code-generator-core/1.0.2/code-generator-core-1.0.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/framework-database/2.0.1/framework-database-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -39,7 +39,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/javacode/1.0.2/javacode-1.0.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/code-generator-core/1.0.4/code-generator-core-1.0.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -48,7 +48,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/javaxml/1.0.1/javaxml-1.0.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/javacode/2.0.1/javacode-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -57,7 +57,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-framework/1.0.2/generatorcode-framework-1.0.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/javaxml/2.0.1/javaxml-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -66,66 +66,12 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-openservice/1.0.2/generatorcode-openservice-1.0.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-framework/1.0.3-SNAPSHOT/generatorcode-framework-1.0.3-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-operationplatform/1.0.1/generatorcode-operationplatform-1.0.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-plt/1.0.1/generatorcode-plt-1.0.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-pos/1.0.1/generatorcode-pos-1.0.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/fartherp/generatorcode-ppms/1.0.1/generatorcode-ppms-1.0.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-        <orderEntry type="module-library">
-          <library>
-            <CLASSES>
-              <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/" />
-            </CLASSES>
-            <JAVADOC />
-            <SOURCES />
-          </library>
-        </orderEntry>
     <orderEntry type="module-library" scope="RUNTIME">
       <library>
         <CLASSES>
@@ -138,7 +84,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.8.RELEASE/spring-beans-3.2.8.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.17.RELEASE/spring-beans-4.3.17.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -147,7 +93,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.8.RELEASE/spring-core-3.2.8.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.17.RELEASE/spring-core-4.3.17.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -156,7 +102,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.3.17.RELEASE/spring-tx-4.3.17.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -165,20 +111,20 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.17.RELEASE/spring-context-4.3.17.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-          <library>
-            <CLASSES>
-              <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/" />
-            </CLASSES>
-            <JAVADOC />
-            <SOURCES />
-          </library>
-        </orderEntry>
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

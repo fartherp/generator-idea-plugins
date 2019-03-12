@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2018. juzhen.io. All rights reserved.
+  ~ Copyright (c) 2018. CK. All rights reserved.
   -->
 
 <idea-plugin>
@@ -16,7 +16,7 @@
         <br>
         作者： CK
         <br>
-        邮箱： yuqiang.cui@gmail.com
+        邮箱： 214722930@gmail.com
         <br>
         主页： https://github.com/fartherp/generator-idea-plugins
     ]]></description>
@@ -48,12 +48,19 @@
     <depends>com.intellij.modules.lang</depends>
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceInterface="com.github.fartherp.plugin.config.CodeConfig" serviceImplementation="com.github.fartherp.plugin.config.CodeConfig"/>
-        <projectConfigurable groupId="tools" displayName="Generator Code Plugin" id="preference.CodeConfigurable" instance="com.github.fartherp.plugin.configurable.CodeConfigurable" />
+        <!--<projectConfigurable groupId="tools" displayName="Generator Code Plugin" id="preference.CodeConfigurable" instance="com.github.fartherp.plugin.configurable.CodeConfigurable" />-->
+
+        <moduleType id="GENERATOR_MODULE_TYPE" implementationClass="com.github.fartherp.plugin.model.GeneratorModuleType"/>
     </extensions>
 
     <actions>
-        <action id="CodeGenerateAction" class="com.github.fartherp.plugin.action.CodeGenerateAction" text="Generator Code">
-            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        <!--<action id="CodeGenerateAction" class="com.github.fartherp.plugin.action.CodeGenerateAction" text="Generator Code">-->
+            <!--<add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>-->
+        <!--</action>-->
+        <action id="CodeGenerateDialogAction"
+                class="com.github.fartherp.plugin.action.CodeGenerateDialogAction"
+                text="Generator Code Dialog" description="Generator Code Dialog">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
         </action>
     </actions>
 </idea-plugin>

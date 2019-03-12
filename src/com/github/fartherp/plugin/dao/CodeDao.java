@@ -43,4 +43,23 @@ public class CodeDao {
         }
         return list;
     }
+
+    public static String testDatabase(CodeConfig config) {
+        DbManager dbManager = new DbManager(config.getUrl(), config.getUser(), config.getPassword());
+        Connection connection = dbManager.getConnection();
+        String selectSql = "SELECT VERSION() AS MYSQL_VERSION";
+        PreparedStatement preparedStatement = dbManager.getPreparedStatement(connection, selectSql);
+        ResultSet resultSet = null;
+        try {
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                return resultSet.getString("MYSQL_VERSION");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            dbManager.close(connection, preparedStatement, resultSet);
+        }
+        return null;
+    }
 }
