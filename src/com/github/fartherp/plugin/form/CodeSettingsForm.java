@@ -18,7 +18,7 @@ import org.apache.commons.lang.ObjectUtils;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumnModel;
+import javax.swing.table.TableColumn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -103,17 +103,19 @@ public class CodeSettingsForm extends JDialog {
                 }
                 apply();
                 // 点击查询按钮事件
-                String title[] = {"", "表名"};
+                String[] title = {"", "表名"};
                 try {
                     List<String> list = CodeDao.selectTableName(config);
                     Object[][] data = new Object[list.size()][2];
                     for (int i = 0; i < list.size(); i++) {
                         data[i][1] = list.get(i);
                     }
-                    DefaultTableModel tableModel = new DefaultTableModel(data, title);
-                    table1.setModel(tableModel);
-                    TableColumnModel tcm = table1.getColumnModel();
-                    tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
+                    table1.setModel(new DefaultTableModel(data, title));
+                    TableColumn tc = table1.getColumnModel().getColumn(0);
+                    tc.setCellEditor(new DefaultCellEditor(new JCheckBox()));
+                    tc.setCellEditor(table1.getDefaultEditor(Boolean.class));
+                    tc.setCellRenderer(table1.getDefaultRenderer(Boolean.class));
+                    tc.setMaxWidth(100);
                 } catch (Exception ex) {
                     Messages.showWarningDialog(project, "数据库连接错误,请检查配置.", "Warning");
                 }
