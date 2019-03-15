@@ -6,7 +6,7 @@
     <id>com.github.fartherp.plugin</id>
     <name>Generator Code Plugin</name>
     <version>1.0.1</version>
-    <vendor email="yuqiang.cui@gmail.com" url="https://github.com/fartherp/generator-idea-plugins">fartherp</vendor>
+    <vendor email="214722930@qq.com" url="https://github.com/fartherp/generator-idea-plugins">fartherp</vendor>
 
     <description><![CDATA[
         根据选择的数据库，匹配数据库中的所有表，自动生成bo类、dao接口、service接口及实现和mapping文件。
@@ -16,7 +16,7 @@
         <br>
         作者： CK
         <br>
-        邮箱： 214722930@gmail.com
+        邮箱： 214722930@qq.com
         <br>
         主页： https://github.com/fartherp/generator-idea-plugins
     ]]></description>
@@ -60,7 +60,7 @@
         <action id="CodeGenerateDialogAction"
                 class="com.github.fartherp.plugin.action.CodeGenerateDialogAction"
                 text="Generator Code Dialog" description="Generator Code Dialog">
-            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>
     </actions>
 </idea-plugin>
